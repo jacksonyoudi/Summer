@@ -5,7 +5,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--bean就是java对象 , 由Spring创建和管理-->
-    <bean id="hello" class="youdi.com.pojo.Hello" name="stone">
-        <property name="name" value="Spring"/>
+    <bean id="student" class="com.youdi.pojo.Student">
+        <!-- 普通值的注入-->
+        <property name="name" value="jackson"/>
+
+        
+
     </bean>
 </beans>
