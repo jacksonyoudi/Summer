@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:annotation-config/>
+    <!--    开启注解支持-->
+    <bean id="address" class="com.youdi.pojo.Address">
+        <property name="address" value="shenzhen"/>
+    </bean>
+
 
     <!--bean就是java对象 , 由Spring创建和管理-->
     <bean id="student" class="com.youdi.pojo.Student">
         <!-- 普通值的注入-->
         <property name="name" value="jackson"/>
 
-        
+        <!-- bean 注入 -->
+<!--        <property name="address" ref="address"/>-->
+
+
+        <!--数组注入 -->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>滑雪</value>
+                <value>公路车</value>
+                <value>coding</value>
+            </list>
+        </property>
+
+
+        <!-- map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="1111111"/>
+                <entry key="驾驶证" value="3333"/>
+                <entry key="银行卡" value="556677"/>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BDB</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="学号">1000344</prop>
+                <prop key="性别">男</prop>
+            </props>
+        </property>
+
 
     </bean>
 </beans>

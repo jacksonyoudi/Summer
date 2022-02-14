@@ -1,10 +1,14 @@
 package com.youdi.pojo;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.*;
 
 public class Student {
     private String name;
+
+    @Autowired
     private Address address;
     private String[] books;
     private List<String> hobbys;
@@ -26,9 +30,9 @@ public class Student {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
     public String[] getBooks() {
         return books;

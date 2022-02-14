@@ -12,7 +12,8 @@ public class MyTest {
 
         Student student = (Student) context.getBean("student");
 
-        System.out.println(student.getName());
+        System.out.println(student);
+        System.out.println(student.getAddress().getAddress());
 
     }
 }
