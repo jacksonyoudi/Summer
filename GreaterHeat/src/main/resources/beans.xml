@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+    <bean id="userService" name="com.youdi.service.UserServiceImp"/>
+    <bean id="log" name="com.youdi.log.Log"/>
+    <bean id="afterlog" name="com.youdi.log.AfterLog"/>
+
+    <!--    配置aop-->
+    <aop:config>
+        <!-- 切入点-->
+        <aop:pointcut id="pointcut" expression="excution(* com.youdi.service.UserServiceImp.*(..))"/>
+
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut"/>
+
+    </aop:config>
+
+
+</beans>
