@@ -16,4 +16,7 @@ public class UserServiceImp implements UserService {
     public void select() {
         System.out.println("select一个用户");
     }
+
+    public UserServiceImp() {
+    }
 }

@@ -2,7 +2,6 @@ package com.youdi.demo;
 
 
 import com.youdi.service.UserService;
-import com.youdi.service.UserServiceImp;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
