@@ -11,6 +11,7 @@
     <modules>
         <module>Proxy</module>
         <module>GreaterHeat</module>
+        <module>Bird</module>
     </modules>
 
     <properties>
