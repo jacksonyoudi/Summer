@@ -21,7 +21,7 @@
         <property name="name" value="jackson"/>
 
         <!-- bean 注入 -->
-<!--        <property name="address" ref="address"/>-->
+        <!--        <property name="address" ref="address"/>-->
 
 
         <!--数组注入 -->

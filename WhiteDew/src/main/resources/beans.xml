@@ -23,14 +23,14 @@
     byType: 会自动在容器上下文中查找，和自己对象类型设置的一致， 类型不能重复， 也可以不用id
 
     -->
-<!--    <bean id="person" class="com.youdi.pojo.Person" autowire="byName">-->
-<!--        <property name="name" value="youdi"/>-->
-<!--    </bean>-->
+    <!--    <bean id="person" class="com.youdi.pojo.Person" autowire="byName">-->
+    <!--        <property name="name" value="youdi"/>-->
+    <!--    </bean>-->
 
 
-<!--    <bean id="person" class="com.youdi.pojo.Person" autowire="byType">-->
-<!--        <property name="name" value="youdi"/>-->
-<!--    </bean>-->
+    <!--    <bean id="person" class="com.youdi.pojo.Person" autowire="byType">-->
+    <!--        <property name="name" value="youdi"/>-->
+    <!--    </bean>-->
 
 
     <bean id="person" class="com.youdi.pojo.Person">

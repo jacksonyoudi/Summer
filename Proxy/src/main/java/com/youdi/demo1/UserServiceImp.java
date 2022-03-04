@@ -1,6 +1,6 @@
 package com.youdi.demo1;
 
-public class UserServiceImp  implements UserService {
+public class UserServiceImp implements UserService {
     @Override
     public void add() {
         System.out.println("add");
