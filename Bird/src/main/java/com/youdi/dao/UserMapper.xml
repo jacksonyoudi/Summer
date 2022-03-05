@@ -2,8 +2,28 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.youdi.dao.UserDao">
+<mapper namespace="com.youdi.dao.UserMapper">
     <select id="getUserList" resultType="com.youdi.pojo.User">
-        select * from mybatis.user;
+        select *
+        from mybatis.user;
     </select>
+
+    <select id="getUserById" resultType="com.youdi.pojo.User" parameterType="int">
+        select *
+        from mybatis.user
+        where id = #{id};
+    </select>
+
+
+    <insert id="addUser" parameterType="com.youdi.pojo.User">
+        insert into mybatis.user (id, name, pwd)
+        values (#{id}, #{name}, #{pwd});
+    </insert>
+
+
+    <update id="updateUser" parameterType="com.youdi.pojo.User">
+        update mybatis.user
+        set name='${name}',pwd='${pwd}'
+        where id = #{id};
+    </update>
 </mapper>
