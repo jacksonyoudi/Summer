@@ -1,0 +1,20 @@
+2022-03-05 21:20:40,950  INFO UserDaoTest:25 - info test
+2022-03-05 21:20:40,953 ERROR UserDaoTest:27 - error test
+2022-03-05 21:23:25,166  INFO UserDaoTest:25 - info test
+2022-03-05 21:23:25,172 DEBUG UserDaoTest:26 - debug test
+2022-03-05 21:23:25,172 ERROR UserDaoTest:27 - error test
+2022-03-05 21:23:25,411 DEBUG LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2022-03-05 21:23:25,412 DEBUG LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2022-03-05 21:23:25,444 DEBUG PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections.
+2022-03-05 21:23:25,444 DEBUG PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections.
+2022-03-05 21:23:25,445 DEBUG PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections.
+2022-03-05 21:23:25,445 DEBUG PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections.
+2022-03-05 21:23:25,541 DEBUG JdbcTransaction:137 - Opening JDBC Connection
+2022-03-05 21:23:26,124 DEBUG PooledDataSource:434 - Created connection 1864230087.
+2022-03-05 21:23:26,125 DEBUG JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f1de4c7]
+2022-03-05 21:23:26,132 DEBUG getUserList:137 - ==>  Preparing: select * from mybatis.user;
+2022-03-05 21:23:26,184 DEBUG getUserList:137 - ==> Parameters: 
+2022-03-05 21:23:26,233 DEBUG getUserList:137 - <==      Total: 4
+2022-03-05 21:23:26,237 DEBUG JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f1de4c7]
+2022-03-05 21:23:26,245 DEBUG JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f1de4c7]
+2022-03-05 21:23:26,246 DEBUG PooledDataSource:391 - Returned connection 1864230087 to pool.

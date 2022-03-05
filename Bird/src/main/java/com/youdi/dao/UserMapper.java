@@ -3,12 +3,19 @@ package com.youdi.dao;
 import com.youdi.pojo.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
-    public List<User> getUserList();
+    List<User> getUserList();
 
-    public User getUserById(Integer id);
+    User getUserById(Integer id);
 
-    public int addUser(User user);
+    int addUser(User user);
+
     int updateUser(User user);
+
+    int addUserOfMap(Map<String, Object> map);
+
+
+
 }

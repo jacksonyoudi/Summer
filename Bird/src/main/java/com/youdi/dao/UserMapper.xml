@@ -3,7 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.youdi.dao.UserMapper">
-    <select id="getUserList" resultType="com.youdi.pojo.User">
+
+    <select id="getUserList" resultType="User">
         select *
         from mybatis.user;
     </select>
@@ -21,9 +22,15 @@
     </insert>
 
 
+    <insert id="addUserOfMap" parameterType="map">
+        insert into mybatis.user (id, name, pwd)
+        values (#{id}, #{name}, #{pwd});
+    </insert>
+
     <update id="updateUser" parameterType="com.youdi.pojo.User">
         update mybatis.user
-        set name='${name}',pwd='${pwd}'
+        set name='${name}',
+            pwd='${pwd}'
         where id = #{id};
     </update>
 </mapper>

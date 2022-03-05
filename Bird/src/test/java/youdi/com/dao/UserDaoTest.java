@@ -8,15 +8,25 @@ import com.youdi.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import org.apache.log4j.Logger;
 
 // org.apache.ibatis.binding.BindingException: Type interface com.youdi.dao.UserDao is not known to the MapperRegistry.
 // The error may exist in com/youdi/dao/UserMapper.xml
 
 public class UserDaoTest {
 
+    static Logger logger = Logger.getLogger(UserDaoTest.class);
+
     @Test
     public void test() {
+        logger.info("info test");
+        logger.debug("debug test");
+        logger.error("error test");
+
+
         // 获取 sql session
         SqlSession sqlSession = MybatisUtils.getSqlSession();
 
@@ -82,6 +92,30 @@ public class UserDaoTest {
         User user1 = new User(1, "youdi", "world");
 
         int result = userMapper.updateUser(user1);
+        if (result > 0) {
+            System.out.println("ok");
+        }
+
+        sqlSession.commit();
+
+        sqlSession.close();
+    }
+
+
+    @Test
+    public void testAddUserMap() {
+        // 增删改 需要提交事务
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("id", 6);
+        map.put("name", "hello");
+        map.put("pwd", "mac");
+
+
+        int result = userMapper.addUserOfMap(map);
         if (result > 0) {
             System.out.println("ok");
         }

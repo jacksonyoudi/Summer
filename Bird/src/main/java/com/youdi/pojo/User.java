@@ -1,5 +1,9 @@
 package com.youdi.pojo;
 
+
+import org.apache.ibatis.type.Alias;
+
+@Alias("User")
 public class User {
     private int id;
     private String name;
