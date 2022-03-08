@@ -19,7 +19,12 @@
             </dataSource>
         </environment>
     </environments>
+    <!--    <mappers>-->
+    <!--        <mapper resource="com/youdi/mapper/UserMapper.xml"/>-->
+    <!--    </mappers>-->
+
     <mappers>
-        <mapper resource="com/youdi/mapper/UserMapper.xml"/>
+        <mapper class="com.youdi.mapper.UserMapper"/>
     </mappers>
+
 </configuration>
