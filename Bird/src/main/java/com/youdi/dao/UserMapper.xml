@@ -2,8 +2,10 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--只会加载对应class 或 package下所有class 或 接口-->
 <mapper namespace="com.youdi.dao.UserMapper">
 
+<!--    下面具体实现对应接口-->
     <select id="getUserList" resultType="User">
         select *
         from mybatis.user;
