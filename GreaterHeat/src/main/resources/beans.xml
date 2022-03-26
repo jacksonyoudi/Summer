@@ -13,6 +13,8 @@
     <bean id="afterlog" class="com.youdi.log.AfterLog"/>
 
 
+
+
     <!-- 使用spring api接口-->
     <!--    配置aop-->
     <!--    <aop:config>-->

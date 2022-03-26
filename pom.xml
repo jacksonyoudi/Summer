@@ -12,6 +12,7 @@
         <module>Proxy</module>
         <module>GreaterHeat</module>
         <module>Bird</module>
+        <module>Mariadb</module>
     </modules>
 
     <properties>
