@@ -12,7 +12,11 @@
         <module>Proxy</module>
         <module>GreaterHeat</module>
         <module>Bird</module>
+<<<<<<< HEAD
         <module>JUC</module>
+=======
+        <module>Mariadb</module>
+>>>>>>> 866e39834a10fca3f32b74267234b180604894b4
     </modules>
 
     <properties>

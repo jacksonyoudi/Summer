@@ -3,28 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <!--    保留 别名和设置 -->
     <typeAliases>
         <package name="com.youdi.pojo"/>
     </typeAliases>
 
 
-    <environments default="development">
-        <environment id="development">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>
-                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis"></property>
-                <property name="username" value="root"></property>
-                <property name="password" value="root"></property>
-            </dataSource>
-        </environment>
-    </environments>
+    <!--    <environments default="development">-->
+    <!--        <environment id="development">-->
+    <!--            <transactionManager type="JDBC"/>-->
+    <!--            <dataSource type="POOLED">-->
+    <!--                <property name="driver" value="com.mysql.cj.jdbc.Driver"></property>-->
+    <!--                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis"></property>-->
+    <!--                <property name="username" value="root"></property>-->
+    <!--                <property name="password" value="root"></property>-->
+    <!--            </dataSource>-->
+    <!--        </environment>-->
+    <!--    </environments>-->
     <!--    <mappers>-->
     <!--        <mapper resource="com/youdi/mapper/UserMapper.xml"/>-->
     <!--    </mappers>-->
 
-    <mappers>
-        <mapper class="com.youdi.mapper.UserMapper"/>
-    </mappers>
+<!--    <mappers>-->
+<!--        <mapper class="com.youdi.mapper.UserMapper"/>-->
+<!--    </mappers>-->
 
 </configuration>
